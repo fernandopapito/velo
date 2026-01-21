@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Velô Elite Car Configurator - Design System */
+
+@layer base {
+  :root {
+    /* Core backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    
+    /* Car stage - light grey to make car pop */
+    --stage: 220 14% 90%;
+    --stage-foreground: 220 15% 15%;
+
+    /* Cards and panels */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - elegant dark */
+    --primary: 220 15% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - subtle grey */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 15% 15%;
+
+    /* Muted elements */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - sophisticated blue */
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors for car options */
+    --glacier-blue: 200 80% 60%;
+    --midnight-back: 220 10% 15%;
+    --lunar-white: 0 0% 98%;
+    --carbon-black: 220 15% 20%;
+    --deep-blue: 200 70% 45%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 220 15% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 210 100% 50%;
+
+    /* Typography */
+    --font-display: 'Outfit', sans-serif;
+    --font-body: system-ui, -apple-system, sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.07), 0 2px 4px -2px hsl(220 15% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.08), 0 4px 6px -4px hsl(220 15% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 15% 15% / 0.1), 0 8px 10px -6px hsl(220 15% 15% / 0.05);
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .stage-gradient {
+    background: linear-gradient(180deg, hsl(var(--stage)) 0%, hsl(220 14% 85%) 100%);
+  }
+
+  .glass-panel {
+    @apply bg-card/95 backdrop-blur-sm;
+  }
+
+  .swatch-ring {
+    @apply ring-2 ring-offset-2 ring-offset-background ring-primary;
+  }
+}

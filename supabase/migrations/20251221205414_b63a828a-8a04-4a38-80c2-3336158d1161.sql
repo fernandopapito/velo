@@ -1,0 +1,1 @@
+ALTER TABLE public.orders RENAME COLUMN exterior_color TO color;
