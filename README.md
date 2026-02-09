@@ -1,5 +1,7 @@
 # Velô Sprint - Configurador de Veículo Elétrico
 
+Branch: refact-ia-01
+
 Aplicação web em React para configuração e compra do veículo elétrico **Velô Sprint**.
 
 ## Sobre o Projeto
