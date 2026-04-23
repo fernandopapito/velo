@@ -64,5 +64,11 @@ export function createCheckoutActions(page: Page) {
     async submit() {
       await page.getByRole('button', { name: 'Confirmar Pedido' }).click()
     },
+
+    async expectResult(status: string) {
+      await expect(page).toHaveURL(/\/success/)
+      await expect(page.getByRole('heading', { name: status })).toBeVisible()
+    }
+
   }
 }
