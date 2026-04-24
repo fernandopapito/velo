@@ -336,7 +336,7 @@ test.describe('Checkout', () => {
       await app.checkout.expectResult('Pedido Aprovado!')
     })
 
-    test('deve reprovar o crédito quando o score do CPF for menor ou igual a 500 no financiamento com entrada mair que 50%', async ({ app }) => {
+    test('deve aprovar o crédito quando o score do CPF for menor ou igual a 500 no financiamento com entrada mair que 50%', async ({ app }) => {
 
       const customer = {
         name: 'Axl',
