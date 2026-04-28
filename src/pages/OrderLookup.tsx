@@ -47,18 +47,18 @@ const OrderLookup = () => {
     setNotFound(false);
     setSearchedOrder(null);
     setIsLoading(true);
-    
+
     const { order, error } = await getOrderByNumber(orderId);
-    
+
     setIsLoading(false);
-    
+
     if (error) {
       setNotFound(true);
       return;
     }
-    
+
     if (order) {
-      setSearchedOrder(order);      
+      setSearchedOrder(order);
     } else {
       setNotFound(true);
     }
@@ -145,13 +145,12 @@ const OrderLookup = () => {
                 </div>
                 <div
                   role="status"
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${
-                    searchedOrder.status === 'APROVADO'
-                      ? 'bg-green-100 text-green-700'
-                      : searchedOrder.status === 'REPROVADO'
-                        ? 'bg-red-100 text-red-700'
-                        : 'bg-amber-100 text-amber-700'
-                  }`}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${searchedOrder.status === 'APROVADO'
+                    ? 'bg-green-100 text-green-700'
+                    : searchedOrder.status === 'REPROVADO'
+                      ? 'bg-red-100 text-red-700'
+                      : 'bg-amber-100 text-amber-700'
+                    }`}
                 >
                   {searchedOrder.status === 'APROVADO' ? (
                     <CheckCircle className="w-4 h-4" />

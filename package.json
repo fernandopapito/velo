@@ -91,6 +91,7 @@
     "postcss": "^8.5.6",
     "supabase": "^2.84.10",
     "tailwindcss": "^3.4.17",
+    "tdpw": "^1.0.36",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
     "vercel": "^52.0.0",
